@@ -8,6 +8,7 @@
 
 <script>
     export default {
+        name: 'counter',
         data() {
             return {
                 count: 0

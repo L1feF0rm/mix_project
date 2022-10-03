@@ -14,21 +14,15 @@ export default new VueRouter({
         path: '/async',
         component: AsyncView
     }, {
-        path: '/lazy',
-        component() {
-            return new Promise(function (resolve) {
-                setTimeout(function () {
-                    resolve(import(
-                        /* webpackChunkName: "counter/[request]" */
-                        /* webpackMode: "lazy" */
-                        '../components/Counter.vue'
-                    ));
-                }, 4000);
-            });
-        }
-    }, {
         path: '/counter',
-        component: Counter
+        component() {
+            return import(
+                /* webpackIgnore: false */
+                /* webpackMode: "lazy" */
+                /* webpackChunkName: "counter" */
+                '../components/Counter.vue'
+            );
+        }
     }, {
         path: '*',
         redirect: '/'
