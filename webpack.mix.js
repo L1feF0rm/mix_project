@@ -26,10 +26,10 @@ mix
                     php: `<?php echo json_encode([
                         'REMOTE_ADDR' => $_SERVER['REMOTE_ADDR'],
                         'REMOTE_PORT' => $_SERVER['REMOTE_PORT'],
-                        'SERVER_SOFTWARE' => $_SERVER['SERVER_SOFTWARE']          
-                    ]) ?>`    
-                },                
-                publicPath: '.'                
+                        'SERVER_SOFTWARE' => $_SERVER['SERVER_SOFTWARE']
+                    ]) ?>`
+                },
+                publicPath: '.'
 	        }),
 	        new CspHtmlWebpackPlugin({
                 'default-src': "'self'",
