@@ -6,7 +6,3 @@ export {
     default as Async,
     AsyncView
 } from './Async.js';
-
-export {
-    default as Counter
-} from './Counter.vue';

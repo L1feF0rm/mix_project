@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import {App, AsyncView, Counter} from '../components';
+import {App, AsyncView} from '../components';
 
 Vue.use(VueRouter);
 
@@ -16,12 +16,7 @@ export default new VueRouter({
     }, {
         path: '/counter',
         component() {
-            return import(
-                /* webpackIgnore: false */
-                /* webpackMode: "lazy" */
-                /* webpackChunkName: "counter" */
-                '../components/Counter.vue'
-            );
+            return import(/* webpackChunkName: "counter" */ '../components/Counter.vue');
         }
     }, {
         path: '*',
