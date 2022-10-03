@@ -1,0 +1,25 @@
+@media (prefers-color-scheme: light) {
+    :root {
+        --blue: blue;
+        --cyan: cyan;
+        --green: green;
+        --red: red;
+        --magenta: magenta;
+        --orange: orange;
+        --turquoise: turquoise;
+        --violet: violet;
+    }  
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --blue: darkblue;
+        --cyan: darkcyan;
+        --green: darkgreen;
+        --red: darkred;
+        --magenta: darkmagenta;
+        --orange: darkorange;
+        --turquoise: darkturquoise;
+        --violet: darkviolet;
+    }
+}

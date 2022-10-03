@@ -1,0 +1,28 @@
+@import 'variables';
+@import 'reset';
+
+@property --angle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;    
+}
+
+@keyframes rotate {
+    to {
+        --angle: 1turn;
+    }
+}
+
+[v-cloak],
+[x-cloak] {
+    display: none;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(var(--angle), var(--cyan), var(--magenta));
+    @media (prefers-reduced-motion: no-preference) {
+        animation: 8s linear infinite rotate;
+    }
+}
