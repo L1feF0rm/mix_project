@@ -3,6 +3,7 @@
   "version": "1.3.0",
   "description": "mix project template (vue 2 & vue-router 3 & vuex 3 & alpinejs 3)",
   "license": "UNLICENSED",
+  "private": true,
   "author": {
     "name": "Kamen",
     "email": "kbalabanov@gmail.com",
