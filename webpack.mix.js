@@ -38,7 +38,11 @@ mix
                 'style-src': "'none'"
             }),
             new MomentLocalesPlugin({localesToKeep: ['bg']}),
-            new MomentTimezoneDataPlugin({matchZones: /^Europe/, startYear: currentYear - 5, endYear: currentYear + 20})
+            new MomentTimezoneDataPlugin({
+                matchZones: /^Europe/,
+                startYear: currentYear - 10,
+                endYear: currentYear + 40
+            })
 	    ],
         resolve: {
             alias: {
