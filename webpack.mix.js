@@ -1,5 +1,5 @@
-const package = require('./package.json');
 const mix = require('laravel-mix');
+const package = require('./package.json');
 const {default: InjectBodyWebpackPlugin} = require('inject-body-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CspHtmlWebpackPlugin = require('csp-html-webpack-plugin');
