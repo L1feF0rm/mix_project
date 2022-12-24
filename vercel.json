@@ -1,0 +1,19 @@
+{
+  "functions": {
+    "public/*.php": {
+      "runtime": "vercel-php@0.5.2"
+    }
+  },
+  "routes": [{
+    "src": "/(.*).html",
+    "dest": "public/$1.html", 
+    "methods": ["GET"]
+  }, {
+    "src": "/(css|js)/(.*)",
+    "dest": "public/$1/$2",
+    "methods": ["GET"]
+  }, {
+    "src": "/(.*)",
+    "dest": "/api/index.php"
+  }]
+}
