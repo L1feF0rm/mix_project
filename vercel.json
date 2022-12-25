@@ -1,16 +1,15 @@
 {
   "functions": {
-    "public/*.php": {
+    "api/index.php": {
       "runtime": "vercel-php@0.5.2"
+    },
+    "public/**": {
+      "runtime": "@vercel/static"
     }
   },
   "routes": [{
-    "src": "/(.*).html",
-    "dest": "public/$1.html", 
-    "methods": ["GET"]
-  }, {
-    "src": "/(css|js)/(.*)",
-    "dest": "public/$1/$2",
+    "src": "/(.*).(css|js|html)",
+    "dest": "public/$1.$2", 
     "methods": ["GET"]
   }, {
     "src": "/(.*)",
