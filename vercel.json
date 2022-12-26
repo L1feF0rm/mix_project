@@ -2,13 +2,10 @@
   "functions": {
     "api/index.php": {
       "runtime": "vercel-php@0.5.2"
-    },
-    "public/**": {
-      "runtime": "@vercel/static"
     }
   },
   "routes": [{
-    "src": "/(.*).(css|js|html)",
+    "src": "/(.*).(css|html|js)",
     "dest": "public/$1.$2", 
     "methods": ["GET"]
   }, {
